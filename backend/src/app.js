@@ -12,4 +12,5 @@ app.use(express.json())
 // Routes
 app.use('/api/users', require('./routes/users'))
 app.use('/api/notes',require('./routes/notes'))
+app.use('/api/checada',require('./routes/checada'))
 module.exports = app;
