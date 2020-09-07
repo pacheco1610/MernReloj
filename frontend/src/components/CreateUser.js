@@ -12,10 +12,16 @@ export default function CreateUser() {
         }   
         fetchData() 
     })
-    const onSubmit=(e)=>{
-        alert('aiuda')
+    const onSubmit= async (e)=>{
+        e.preventDefault();
+        await axios.post('http://localhost:4000/api/users',{
+            username:username
+        })
+        setUsername('')
     }   
-
+    const DeleteUser= async(id)=> {
+        await axios.delete(`http://localhost:4000/api/users/${id}`)
+    }
     return (
         <section>
             <div className="container">
@@ -23,18 +29,23 @@ export default function CreateUser() {
                     <div className="col-md-4">
                        <div className="card card-body">
                             <h3 className="card-title">Create New User</h3>
-                           <form onSubmit={()=>onSubmit()}>
+                           <form onSubmit={(e)=>onSubmit(e)}>
                                 <div className="form-group">
                                     <input type="text" value={username} className="form-control" onChange={(e)=>setUsername(e.target.value)}/>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Save</button>
+                                <div className="form-group mt-2">
+                                    <button type="submit" className="btn btn-block btn-primary">Save</button>
+                                </div>
                            </form>
                        </div>
                     </div>
                     <div className="col-md-8">
                         <ul className="list-group">
                             {usuarios.map(usuario=>
-                                <li className="list-group-item list-group-item-action" key={usuario._id}>
+                                <li className="list-group-item
+                                list-group-item-action" 
+                                onDoubleClick={()=>DeleteUser(usuario._id)}
+                                key={usuario._id}>
                                     {usuario.username}
                                 </li>
                             )}

@@ -4,24 +4,30 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap'
 import './App.css';
 
+import Navbar from './components/layout/navbar.jsx'
+import Sidebar from './components/layout/sidebar.jsx'
+import Asistencia from './components/asistencias/asistencia'
+import Contenct from './components/layout/content.jsx'
 
-import Navigation from './components/Navigation'
-import NoteList from './components/NoteList'
-import CreateNote from './components/CreateNote'
-import CreateUser from './components/CreateUser'
+
+
 
 function App() {
   return (
     <Router>
-      <Navigation />
-      <div className="container pt-5">
-        <Switch>
-          <Route exact path="/" component={NoteList}/>
-          <Route exact path="/edit/:id" component={CreateNote}/>
-          <Route exact path="/create" component={CreateNote}/>
-          <Route exact path="/user" component={CreateUser}/>
-        </Switch>
+      <div className="d-flex" id="content-wrapper">
+      <Sidebar/>
+      <div className="w-100" id="page-container">
+        <Navbar/>
+        <Contenct>
+          <Switch>
+            <Route exact path="/" component={Asistencia}/>
+          </Switch>
+        </Contenct>
       </div>
+
+      </div>
+
     </Router>
   );
 }
