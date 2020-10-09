@@ -1,4 +1,22 @@
+
+:root{
+    --primary:#2c7ef9;
+    --sucefully:#43D29E;
+    --danger:#EB4E36;
+    --warning:#E8C63B;
+    --light:#E4E7EF;
+  }  
 .dia{
     font-size: 0.8rem !important;
     width: 10rem;
+}
+
+.bg-checada{
+    background-color: var(--sucefully);
+}
+.bg-falta{
+    background-color: var(--danger);
+}
+.bg-Outchecada{
+    background-color: var(--light);
 }

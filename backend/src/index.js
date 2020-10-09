@@ -1,9 +1,21 @@
 const app = require('./app')
 require('./database')
+const test = require('./zklib')
+const SocketIO = require('socket.io')
 
-async function main(){
-    await app.listen(app.get('port'))
-    console.log('server on port 4000')
-}
 
-main()
+const server = app.listen(app.get('port'),()=>{
+    console.log('Server on port', app.get('port'));
+})
+
+ 
+
+
+const io = SocketIO.listen(server)
+
+io.on('connection',(socket)=>{
+    //console.log('Usuario Conectado')
+
+})
+
+test(io)

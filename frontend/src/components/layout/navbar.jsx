@@ -16,10 +16,10 @@ export default function Navbar() {
                                 Emmanuel
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
+                                <Link className="dropdown-item" to="/">Action</Link>
+                                <Link className="dropdown-item" to="/">Another action</Link>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <Link className="dropdown-item" to="/">Something else here</Link>
                             </div>
                         </li>
                     </ul>

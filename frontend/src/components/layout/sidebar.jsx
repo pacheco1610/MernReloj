@@ -21,15 +21,15 @@ export default function sidebar() {
             </div>
             <div className="menu list-group-flush mt-1">
                 <span className="list-group-item border-0 p-2  pl-4 font-weight-bold">Asitencia</span>
-                <Link className="list-group-item btn-sidebar text-secondary btn-sidebar p-3 pl-4 border-0" to="">
+                <Link className="list-group-item btn-sidebar text-secondary btn-sidebar p-3 pl-4 border-0" to="/">
                     <i className="far fa-calendar-check mr-2"/>
                     <span>Asistencias</span>
                 </Link>
-                <Link className="list-group-item text-secondary  btn-sidebar p-3 pl-4  border-0" to="">
+                <Link className="list-group-item text-secondary  btn-sidebar p-3 pl-4  border-0" to="/">
                     <i className="far fa-calendar-plus mr-2"/>
                     <span>Eventos</span>
                 </Link>
-                <Link className="list-group-item text-secondary  btn-sidebar p-3 pl-4  border-0" to="">
+                <Link className="list-group-item text-secondary  btn-sidebar p-3 pl-4  border-0" to="/">
                     <i className="far fa-clock mr-2"/>
                     <span>Relojes</span>
                 </Link>

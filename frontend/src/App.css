@@ -1,7 +1,7 @@
 :root{
   --primary:#2c7ef9;
-  --sucefully:#2CF977;
-  --danger:#F94E2C;
+  --sucefully:#43D29E;
+  --danger:#EB4E36;
 }  
   body{
       background-color: #f1f1f0;
@@ -62,12 +62,7 @@
   }
   
 /*Checadas*/
-.bg-checada{
-  background-color: var(--sucefully);
-}
-.bg-falta{
-  background-color: var(--danger);
-}
+
 .tableAsisten td{ 
   vertical-align:middle;
   text-align: center;
